@@ -1,0 +1,85 @@
+body {
+  position: relative;
+  margin: 0;
+  background-color: #EFF7FA;
+}
+
+body canvas, #overlay {
+  position: absolute;
+}
+
+canvas {
+  border: 1px solid #FFFFFF;
+}
+
+img {
+  width: calc(100px + 5vw);
+  float: left;
+}
+
+#name {
+  font-family: 'Courier New', monospace;
+  font-size: calc(30px + 3vw);
+  padding-left: 5%;
+  line-height: 120%;
+  margin-bottom:0;
+  color: #FF4E50;
+}
+
+#body-text {
+  font-family: 'Courier New', monospace;
+  font-size: calc(20px + 1vw);
+  padding-left: 5%;
+  line-height: 120%;
+  margin-bottom: 0;
+  color: #77777;
+}
+
+.adj-content {
+  overflow: hidden;
+  padding-left: 2%;
+}
+
+.alohomora {
+  color: initial;
+  line-height: 160%;
+}
+
+.header1 {
+  font-weight: bold;
+  line-height: 100%;
+  margin-bottom: 0;
+  color: #FF4E50;
+}
+
+.header2 {
+  font-size: calc(8px + 0.4vw);
+  margin-top: 10px;
+  line-height: 110%;
+  color: #555555;
+}
+
+
+.hidden {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0px;
+  transition: max-height 500ms;
+  transition: padding 100ms;
+}
+.hidden.active {
+  max-height: 1000px;
+  overflow: hidden;
+  padding: calc(10px + 0.5vw);
+  transition: max-height padding 500ms;
+  transition: padding 100ms;
+}
+
+div[name=content] {
+  background-color: #ffffff;
+  font-size: 15px;
+  color: #222222;
+  width: calc(150px + 40vw);
+  line-height: 120%;
+  font-size: calc(15px + 0.3vw);
+}
