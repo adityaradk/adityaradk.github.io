@@ -74,9 +74,12 @@ img {
   transition: padding 100ms;
 }
 
+#research {
+  font-size: 15px !important;
+}
+
 div[name=content] {
   background-color: #ffffff;
-  font-size: 15px;
   color: #222222;
   width: calc(150px + 40vw);
   line-height: 120%;
