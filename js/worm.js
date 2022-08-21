@@ -157,6 +157,8 @@ function moveWorm() {
     proximity = false;
   }
 
+  requestAnimationFrame(animate);
+
 }
 
 function animate() {
@@ -166,7 +168,6 @@ function animate() {
   ctx.fillStyle = "#EFF7FA";
   ctx.fillRect(0,0, canvas.width, canvas.height);
   drawSnake(curXpos, curYpos);
-  requestAnimationFrame(animate);
 
 }
 
