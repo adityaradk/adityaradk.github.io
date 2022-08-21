@@ -175,7 +175,7 @@ function drawSnake(posX, posY) {
 
       drawHead(posX-5, posY-5);
       dragSegment(0, posX-5, posY-5);
-      for(var i=x.length-1; i >=0; i--) {
+      for(var i=x.length-2; i >= 0; i--) {
          dragSegment(i+1, x[i], y[i]);
       }
       drawTail();
