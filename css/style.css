@@ -59,7 +59,6 @@ img {
   color: #555555;
 }
 
-
 .hidden {
   max-height: 0;
   overflow: hidden;
@@ -68,7 +67,7 @@ img {
   transition: padding 100ms;
 }
 .hidden.active {
-  max-height: 1000px;
+  max-height: 10000px;
   overflow: hidden;
   padding: calc(10px + 0.5vw);
   transition: max-height padding 500ms;
