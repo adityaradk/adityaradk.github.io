@@ -8,41 +8,60 @@ body canvas, #overlay {
   position: absolute;
 }
 
-canvas {
-  border: 1px solid #FFFFFF;
-}
-
 img {
   width: calc(100px + 5vw);
   float: left;
 }
 
+@font-face {
+  font-family: 'animosa-bold';
+  src: url('./Animosa-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'animosa-medium';
+  src: url('./Animosa-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lucidia';
+  src: url('./Lucida\ Grande\ Regular.ttf') format('truetype');
+}
+
 #name {
-  font-family: 'Courier New', monospace;
-  font-size: calc(30px + 3vw);
+  font-family: 'animosa-bold';
+  font-size: calc(35px + 5vw);
   padding-left: 5%;
-  line-height: 120%;
+  line-height: 100%;
   margin-bottom:0;
+  margin-top: calc(25px + 3vw);
   color: #FF4E50;
 }
 
+.alohomora {
+  font-family: 'animosa-medium';
+  font-size: calc(20px + 1vw);
+  color: #5A5A5A;
+  line-height: 140%;
+}
+
 #body-text {
-  font-family: 'Courier New', monospace;
   font-size: calc(20px + 1vw);
   padding-left: 5%;
   line-height: 120%;
   margin-bottom: 0;
-  color: #77777;
+  color: #FFFFFF;
+}
+
+#body-text {
+  padding-left: 5%;
+  line-height: 120%;
+  margin-bottom: 0;
 }
 
 .adj-content {
   overflow: hidden;
   padding-left: 2%;
-}
-
-.alohomora {
-  color: initial;
-  line-height: 160%;
 }
 
 .header1 {
@@ -54,9 +73,9 @@ img {
 }
 
 .header2 {
-  font-size: calc(8px + 0.4vw);
-  margin-top: 10px;
-  line-height: 110%;
+  font-size: calc(12px + 0.2vw);
+  margin-top: 3px;
+  line-height: 120%;
   color: #555555;
 }
 
@@ -68,6 +87,7 @@ img {
   transition: padding 100ms;
 }
 .hidden.active {
+  font-family: 'lucidia';
   max-height: 10000px;
   overflow: hidden;
   padding: calc(10px + 0.5vw);
@@ -85,4 +105,24 @@ div[name=content] {
   width: calc(150px + 40vw);
   line-height: 120%;
   font-size: calc(15px + 0.3vw);
+}
+
+#wormhead {
+  color: #FF4E50;
+}
+
+#wormbody1 {
+  color: #FC913A;
+}
+
+#wormbody2 {
+  color: #F9D423;
+}
+
+#wormbody3 {
+  color: #EDE574;
+}
+
+#wormtail {
+  color: #FF4E50;
 }
