@@ -20,7 +20,6 @@
 
 <script src="js/connectome.js"></script>
 <script src="js/worm.js"></script>
-<script src="js/transition.js"></script>
 
 <body onload="init();">
 
@@ -35,118 +34,111 @@
         <a href="#" class="alohomora" onclick="reveal('about')">About</a><br>
         <div id="about" class="hidden" name="content">
           Hi! I'm Aditya, and I like making intelligent machines. As an <a href="#" onclick="reveal('edu')">undergrad</a>, I major in Computer Science.<br><br>
-          Over the years, I've worked on quite a few <a href="#" onclick="reveal('research')">projects</a> involving both <b>fundamental and applied work in AI, particularly in neural networks</b>. I've done research trying to develop <b>biologically-motivated neural learning</b> systems while also applying ML/DL in areas including <b>healthcare, conservation, astronomy, and heliophysics.</b><br><br>
-          I've worked with a wide range of learning models, spanning spiking networks, CNNs, transformers, RNNs, GANs, LSMs/ESNs, MLPs, and more. I've also worked with a variety of non-DL machine learning models. I'm proficient in Python and familiar with PyTorch, Tensorflow, Keras, scikit-learn, Numpy, SciPy, Pandas, and many more common Python libraries/tools.<br><br>
-          I also have <b>broad experience in both research and computer programming.</b> In the past, I'd done a lot of work with a range of web languages and frameworks in addition to projects using Java, C,  and C++. My experience in machine learning and general research has also given me a good amount of exposure to <b>data science</b>, which has enabled me to make significant contributions even in non-CS domains.
+          Over the years, I've worked on numerous <a href="#" onclick="reveal('research')">projects</a> involving both <b>applied and fundamental work in AI, with a particular focus on neural networks</b>. I've made significant contributions to applied ML/DL research in domains including <b>healthcare, conservation, and astrophysics</b>. Additionally, I've been exploring novel approaches to AI, especially in <b>biologically-motivated neural learning systems.</b><br><br>
+          I also have <b>broad experience in both research and computer programming.</b> This includes work in Java, C, and C++, as well as a range of web languages and frameworks. I'm also experienced in <b>data science</b>, which has enabled me to make significant contributions in varied domains.
         </div>
 
         <a href="#" class="alohomora" onclick="reveal('edu')">Education</a><br>
         <div id="edu" class="hidden" name="content">
-          <img src="img/georgiatech.png" style="padding-top:15px">
+          <img src="img/georgiatech.png" style="padding-top:15px" id="img_gatech">
           <div class="adj-content">
              <p class="header1">Georgia Institute of Technology</p>
-             <p class="header2"><i>Bachelor of Science (BS) in Computer Science</i><br>Aug. 2022 - Present</p>
+             <p class="header2"><i>Bachelor of Science (BS) in Computer Science</i><br><b>May 2025</b></p>
           </div>
-          <ul>
-            <li>CS major at Georgia Tech, currently in my sophomore year.</li>
-          </ul>
-          <br>
-          <img src="img/utdallas.jpg">
-          <div class="adj-content">
-             <p class="header1">University of Texas at Dallas</p>
-             <p class="header2"><i>Bachelor of Science (BS) in Computer Science</i><br>Aug. 2021 - Aug. 2022</p>
-          </div>
-          <ul>
-            <li>I spent a year as an undergraduate at UT Dallas, majoring in computer science.</li>
-            <li>Was a Computing Scholar, National Merit Scholar, and a member of the Collegium V Honors program.</li>
-            <li><b>GPA:</b> 3.95/4.00</li>
-          </ul>
+          <p>Third-year CS major, with threads in Intelligence and Theory.<br><br><b>GPA: 4.00/4.00</b></p>
         </div>
 
         <a href="#" class="alohomora" onclick="reveal('research')">Research & Experience</a><br>
         <div id="research" class="hidden" name="content">
-          <p class="header1">Research Intern @ Carnegie Mellon University</p>
+          <p class="header1">Hewlett Packard Enterprise: <i>Data Science Intern</i></p>
+          <p class="header2">May. 2023 - Aug. 2023</p>
+          <ul>
+            <li>Designed and built a copyright extraction tool using intelligent algorithms and LLMs, achieving <b>over 98% accuracy</b> in tasks.</li>
+            <li>Tool effectively automated the work of IP lawyers for the first time, <b>saving the company well over half a million dollars a year.</b></li>
+          </ul>
+          <p class="header1">Carnegie Mellon University: <i>Research Intern</i></p>
           <p class="header2">Sep. 2022 - Present</p>
           <ul>
-            <li>Major role designing a new deep learning system to solve a significant unaddressed grand challenge in echocardiography.</li>
+            <li>Leading role designing a new deep learning system to solve a <b>major unaddressed grand challenge in echocardiography.</b></li>
             <li>Solving a complex signal-to-signal generation problem, developing solutions with CNNs, GANs, and attention-based models.</li>
             <li>Developed pipelines to process noisy, disorganized raw signal data, building datasets and effectively engineering features.</li>
           </ul>
           <p class="header1">Independent Student Research</p>
           <p class="header2"><i>Biologically-motivated Neural Learning Systems</i><br>June 2021 - Present</p>
           <ul>
-            <li>Currently developing <b>new spiking neural net models</b>, building more bioplausible frameworks, attempting to imitate the brain’s networks far more closely than deep learning.</li>
-            <li>Models include features such as local error propagation, varied recursive structures for networks of spiking neurons, synapse-based short term memory, and rich time-based operation.</li>
+            <li>Currently developing <b>new spiking neural net models</b>, building more bioplausible frameworks, imitating the brain’s networks far more closely than deep learning.</li>
+            <li>Models include features such as local error propagation, varied recursive structures for networks of spiking neurons, synapse-based short term memory, and rich temporal operation.</li>
             <li>Designed with an eye for efficiency and scalability, strongly taking advantage of hardware acceleration.</li>
           </ul>
-          <p class="header1">Research @ PPC Pharmaceuticals</p>
+          <p class="header1">PPC Pharmaceuticals: <i>Research Intern</i></p>
           <p class="header2">June 2022 - Aug. 2022</p>
           <ul>
-            <li>Major role in performing the data analysis for a clinical trial of a pharmaceutical product intended to reduce antibiotic misuse.</li>
+            <li>Performed the data analysis for a clinical trial of a pharmaceutical product intended to reduce antibiotic misuse.</li>
             <li>Devised new illness evaluation metrics and procedures for agnostic analysis of diverse diseases, then implemented in statistical analyses to enable performance comparisons and significance testing across different drug variants/placebo.</li>
-            <li>First-author in a publication currently under peer review.</li>
+            <li>First author in  <b>peer-reviewed publication to Infection and Drug Resistance</b> (doi: 10.2147/IDR.S392087)</li>
           </ul>
-          <p class="header1">Research Intern @ Carnegie Mellon University</p>
+          <p class="header1">Carnegie Mellon University: <i>Research Intern</i></p>
           <p class="header2"><i>Institute for Software Research</i><br>July 2020 - Feb. 2021</p>
           <ul>
             <li>Developed machine learning-based algorithms to introduce the new capability of reliably discriminating between COVID-19 and influenza automatically, a key frontline diagnostic need for hospitals.</li>
-            <li>Using only vital signs, models achieved ROC-AUC scores of <b>at least 97%.</b></li>
-            <li>Co-authored a publication to <b>Nature's npj Digital Medicine</b>.</li>
+            <li>Using only vital signs, models achieved ROC-AUC <b>scores of at least 97%.</b></li>
+            <li>Co-authored <b>peer-reviewed publication to Nature's npj Digital Medicine</b> (doi: 10.1038/s41746-021-00467-8).</li>
           </ul>
           <p class="header1">Independent Student Research</p>
           <p class="header2"><i>Zoolobot & SCAMANDER: Applying Deep Learning in Conservation</i><br>June 2018 - July 2020</p>
           <ul>
-            <li>Developed <b>a new deep neural network-based meta-learning approach to one-shot learning</b> using hypernetworks to solve <b>a key problem in global conservation</b> efforts by enabling computer vision-based endangered species identification.</li>
-            <li>The approach broadly enables learning with <b>only one training sample</b>, and is capable of being applied to a wide range of deep neural network variants.</li>
+            <li>Devised a <b>new deep learning technique for one-shot learning</b> in computer vision for applications in the <b>critical identification
+              of very rare endangered species</b> – a challenge traditionally requiring great financial resources, personnel, and/or infrastructure.</li>
+            <li>Image classification models given merely <b>one training sample</b> per class achieved <b>modal accuracy of ~80%.</b></li>
             <li>The SCAMANDER hypernetwork model was implemented in a web+android application called Zoolobot, with offline capabilities for remote fieldwork.</li>
           </ul>
-          <p class="header1">Teaching Assistant @ Carnegie Mellon University-SSN Summer Program</p>
+          <p class="header1">Carnegie Mellon University-SSN Internship: <i>Teaching Assistant</i></p>
           <p class="header2"><i>Institute for Software Research</i><br>May 2020 - July 2020</p>
           <ul>
-            <li>I was the teaching assistant for an international CMU program for university students supervised by Dr. Raj Reddy.</li>
-            <li>It involved lectures on core topics in machine learning and DS, analyses of the most important papers in AI history, student presentations, and final projects.</li>
+            <li>Teaching assistant for an international CMU program for university students supervised by Dr. Raj Reddy.</li>
+            <li>Lectures on core topics in machine learning and DS, analyses of the most important papers in AI history, student presentations, and final projects.</li>
           </ul>
           <p class="header1">Independent Student Research</p>
-          <p class="header2"><i>FlareNet: Applying Deep Learning in Heliophysics</i><br>June 2018 - July 2020</p>
+          <p class="header2"><i>FlareNet: Applying Deep Learning in Heliophysics</i><br>July 2019 - May 2020</p>
           <ul>
-            <li>Built a <b>new, deep learning-based predictive model for space weather</b>, necessary to protect critical systems, including power grids, satellites, global telecom, and crucial electronics as well as protecting the lives of astronauts.</li>
-            <li>These ConvLSTM models make forecasts for solar flares and coronal mass ejections in a manner <b>more computationally efficient than physical simulations or magnetohydrodynamic models.</b></li>
+            <li>Mentored by Dr. Dibyendu Nandi, developed <b>a new predictive model for space weather</b>, enabling neural nets to makelong-range predictions, having <b>vital applications in protecting critical systems.</b></li>
+            <li>ConvLSTM+CNN models of solar magnetic fields yielded <b>at least 80% accuracy in CME and solar flare prediction</b>.</li>
           </ul>
         </div>
 
         <a href="#" class="alohomora" onclick="reveal('awards')">Awards & Recognition</a><br>
         <div id="awards" class="hidden" name="content">
-          <img src="img/intel.png" style="max-height:70%; max-width:70%">
+          <img src="img/intel.png" style="max-height:70%; max-width:70%" id="img_intel">
           <div class="adj-content">
              <p class="header1">Intel International Science and Engineering Fair</p>
              <p>Grand Award Winner and Finalist</p>
           </div>
           <br>
-          <img src="img/google.jpg" style="margin-top:10px">
+          <img src="img/google.png" style="margin-top:10px" id="img_google">
           <div class="adj-content">
              <p class="header1">Google Science Fair</p>
              <p>Regional Finalist for the Asia-Pacific Region</p>
           </div>
           <br>
-          <img src="img/usaid.png" style="margin-top:20px">
+          <img src="img/usaid.png" style="margin-top:20px" id="img_usaid">
           <div class="adj-content">
              <p class="header1">United States Agency for International Development</p>
-             <p>Digital for Development Award @ ISEF</p>
+             <p>Digital for Development Award</p>
           </div>
           <br>
-          <img src="img/regeneron.jpg">
+          <img src="img/regeneron.jpg" id="img_regeneron">
           <div class="adj-content">
              <p class="header1">Regeneron International Science and Engineering Fair</p>
              <p>Finalist</p>
           </div>
           <br>
-          <img src="img/nasa.jpeg">
+          <img src="img/nasa.jpeg" id="img_nasa">
           <div class="adj-content">
              <p class="header1">NASA Space Apps Hackathon</p>
              <p>Global Finalist</p>
           </div>
           <br>
-          <img src="img/nmsc.jpg">
+          <img src="img/nmsc.jpg" id="img_nmsc">
           <div class="adj-content">
              <p class="header1">National Merit Scholarship Program</p>
              <p>National Merit Scholar</p>
@@ -160,9 +152,11 @@
           The code and connectome are based off of the open-source <a href="https://openworm.org/">OpenWorm project</a> (more specifically, the <a href="https://docs.openworm.org/Projects/c-elegans-robot/"><i>C. elegans</i> robot project</a>).
         </div>
 
+        <a href="#" class="alohomora" onclick='toggleMode()' id="toggleTheme">Dark Theme</a><br>
+
         <a href="#" class="alohomora" onclick="reveal('contact')">Contact</a>
         <div id="contact" class="hidden" name="content">
-          Feel free to send me an email at <a href="mailto:adityark@gatech.edu">adityark@gatech.edu</a>! You can also find me on <a href="https://twitter.com/adityaradk">Twitter</a>.
+          Feel free to send me an email at <a href="mailto:adityark@gatech.edu">adityark@gatech.edu</a>!
         </div>
 
       </div>
@@ -170,5 +164,15 @@
     </div>
 
 </body>
+
+<div id="wormdata">
+  <div id="wormhead"></div>
+  <div id="wormbody1"></div>
+  <div id="wormbody2"></div>
+  <div id="wormbody3"></div>
+  <div id="wormtail"></div>
+</div>
+
+<script src="js/transition.js"></script>
 
 </html>
