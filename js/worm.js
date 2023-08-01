@@ -100,7 +100,6 @@ function init() {
   ctx = canvas.getContext('2d');
   var wormStateInterval = window.setInterval(function(){ nextWormState() }, 500);
   var wormMoveInterval = window.setInterval(function(){ moveWorm() }, 10);
-  requestAnimationFrame(animate);
 
 }
 
@@ -163,10 +162,15 @@ function moveWorm() {
 
 function animate() {
 
+  var bodyElement = document.getElementsByTagName("body")[0];
+  var color = window.getComputedStyle(bodyElement).backgroundColor;
+
+  console.log(color);
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = "#EFF7FA";
-  ctx.fillRect(0,0, canvas.width, canvas.height);
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   drawSnake(curXpos, curYpos);
 
 }
@@ -190,8 +194,11 @@ function drawHead(xin, yin) {
       ctx.save();
       ctx.translate(dx, dy);
 
+      var headElement = document.getElementById('wormhead');
+      var color = window.getComputedStyle(headElement).color;
+
       ctx.beginPath();
-      ctx.fillStyle = "#FF4E50";
+      ctx.fillStyle = color;
       ctx.arc(curXpos - 5, curYpos - 5, 20, 0,2*Math.PI);
       ctx.fill();
       ctx.restore();
@@ -210,7 +217,10 @@ function drawTail() {
       ctx.rotate(angle - (2 * Math.PI / 180));
       ctx.translate(0, -10);
 
-      ctx.fillStyle = "#FF4E50";
+      var tailElement = document.getElementById('wormtail');
+      var color = window.getComputedStyle(tailElement).color;
+
+      ctx.fillStyle = color;
       ctx.beginPath();
       ctx.moveTo(0, 0);
       ctx.lineTo(-40, 10);
@@ -235,15 +245,22 @@ function dragSegment(i,  xin,  yin) {
   ctx.save();
   ctx.translate(x[i], y[i]);
   ctx.rotate(angle);
+  
+  var body1Element = document.getElementById('wormbody1');
+  var color1 = window.getComputedStyle(body1Element).color;
+  var body2Element = document.getElementById('wormbody2');
+  var color2 = window.getComputedStyle(body2Element).color;
+  var body3Element = document.getElementById('wormbody3');
+  var color3 = window.getComputedStyle(body3Element).color;
 
   var segColor;
 
   if (i % 3 == 1)
-    segColor = "#FC913A";
+    segColor = color1;
   else if (i % 3 == 2)
-    segColor = "#F9D423";
+    segColor = color2;
   else
-    segColor = "#EDE574";
+    segColor = color3;
   drawLine(0, 0, segLength, 0, segColor, 20);
 
   ctx.restore();
