@@ -87,6 +87,7 @@ img {
   transition: padding 100ms;
 }
 .hidden.active {
+  border-radius:10px;
   font-family: 'lucidia';
   max-height: 10000px;
   overflow: hidden;
