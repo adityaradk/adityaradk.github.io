@@ -197,10 +197,26 @@ function drawHead(xin, yin) {
       var headElement = document.getElementById('wormhead');
       var color = window.getComputedStyle(headElement).color;
 
+      angle = Math.atan2(dy, dx);
+
+      ctx.translate(curXpos - 5, curYpos - 5); // Move the canvas origin to the center of the rectangle
+      ctx.rotate(angle); // Rotating the canvas by the specified angle
+      
       ctx.beginPath();
       ctx.fillStyle = color;
-      ctx.arc(curXpos - 5, curYpos - 5, 20, 0,2*Math.PI);
+      ctx.fillRect(-20, -10, 20, 20); // Centering the rectangle at (0, 0)
+      ctx.arc(0, 0, 10, -Math.PI / 2, Math.PI / 2);      
       ctx.fill();
+
+      // // Draw the two black eye dots (circles)
+      // ctx.fillStyle = "black";
+      // ctx.beginPath();
+      // ctx.arc(-2, -3, 3, 0, 2 * Math.PI); // First eye dot
+      // ctx.fill();
+      // ctx.beginPath();
+      // ctx.arc(-2, 3, 3, 0, 2 * Math.PI); // Second eye dot
+      // ctx.fill();
+      
       ctx.restore();
 
 }
@@ -220,12 +236,10 @@ function drawTail() {
       var tailElement = document.getElementById('wormtail');
       var color = window.getComputedStyle(tailElement).color;
 
-      ctx.fillStyle = color;
       ctx.beginPath();
-      ctx.moveTo(0, 0);
-      ctx.lineTo(-40, 10);
-      ctx.lineTo(0, 20);
-      ctx.closePath();
+      ctx.fillStyle = color;
+      ctx.fillRect(-20, 0, 20, 20); // Centering the rectangle at (0, 0)
+      ctx.arc(-20, 10, 10, Math.PI / 2, -Math.PI / 2);      
       ctx.fill();
 
       ctx.restore();
