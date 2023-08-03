@@ -162,7 +162,6 @@ function moveWorm() {
   wiggleState += velocity / 100;
   wiggleTheta = Math.sin(wiggleState);
   theta += wiggleTheta * 0.03;
-  console.log(wiggleTheta);
   if (wiggleState >= 2 * Math.PI) {
     wiggleState = 0;
   } 
