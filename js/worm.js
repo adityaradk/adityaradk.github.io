@@ -11,6 +11,9 @@ var theta = Math.PI * Math.random();
 var velocityModerator = 0.01;
 var angleModerator = 2;
 
+var wiggleTheta = 0;
+var wiggleState = 0;
+
 function nextWormState() {
 
   //console.log(theta);
@@ -61,7 +64,7 @@ function nextWormState() {
   }
 
   // If the worm is lethargic, speed it up a little?
-  if (velocity < 2) {
+  if (velocity < 1) {
     velocity = 2;
   }
 
@@ -155,6 +158,14 @@ function moveWorm() {
   else {
     proximity = false;
   }
+
+  wiggleState += velocity / 100;
+  wiggleTheta = Math.sin(wiggleState);
+  theta += wiggleTheta * 0.03;
+  console.log(wiggleTheta);
+  if (wiggleState >= 2 * Math.PI) {
+    wiggleState = 0;
+  } 
 
   requestAnimationFrame(animate);
 
