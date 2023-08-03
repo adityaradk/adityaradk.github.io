@@ -13,7 +13,7 @@ var angleModerator = 2;
 
 function nextWormState() {
 
-  console.log(theta);
+  //console.log(theta);
 
   // Simple simulation routine:
 
@@ -106,7 +106,7 @@ function init() {
 function moveWorm() {
 
   if (isNaN(theta)) {
-    console.log('WASNAN!');
+    //console.log('WASNAN!');
     theta = Math.PI * Math.random();
   }
 
@@ -164,8 +164,6 @@ function animate() {
 
   var bodyElement = document.getElementsByTagName("body")[0];
   var color = window.getComputedStyle(bodyElement).backgroundColor;
-
-  console.log(color);
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
