@@ -205,7 +205,7 @@ function drawHead(xin, yin) {
       ctx.beginPath();
       ctx.fillStyle = color;
       ctx.fillRect(-20, -10, 20, 20); // Centering the rectangle at (0, 0)
-      ctx.arc(0, 0, 10, -Math.PI / 2, Math.PI / 2);      
+      ctx.arc(0, 0, 10, -Math.PI, Math.PI);      
       ctx.fill();
 
       // // Draw the two black eye dots (circles)
@@ -239,7 +239,7 @@ function drawTail() {
       ctx.beginPath();
       ctx.fillStyle = color;
       ctx.fillRect(-20, 0, 20, 20); // Centering the rectangle at (0, 0)
-      ctx.arc(-20, 10, 10, Math.PI / 2, -Math.PI / 2);      
+      ctx.arc(-20, 10, 10, Math.PI, -Math.PI);      
       ctx.fill();
 
       ctx.restore();
